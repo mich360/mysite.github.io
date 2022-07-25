@@ -1,0 +1,208 @@
+ <!DOCTYPE html>   <!--1更新2020/12/2up-->
+<html  lang="ja">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">          <!-- ビューポート（viewport）とは、表示サイズのこと スマホ向け -->  
+    <meta name="google-site-verification" content="DJvMCprGtLkFXUDdf0QfDNKW8jax_P1dhFuBHp3Rfg4" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1"> 
+    <link rel="stylesheet" type="text/css" href="grid3.css">  
+    <link rel="stylesheet" type="text/css" href="grid.css"> 
+    <title>CSS GIRD3</title>
+  <base href=" " target="_self">   <!--HTML4.01のbase要素の解説ページは<a href="base.shtml">こちら</a>になります-->
+
+</head>  
+<body>
+ <h1>CSS</h1>
+
+<main>           <!--  ==============================メイン=========================   -->
+  <h2>Some Heading</h2><!-- ==========移動済　内部 CSS　おわりHTML  始まり  ==========   -->
+    <p>Some content and stuff</p>
+  <main class="wrapper">                                   <!--  ==========HTML  wrapper ==========   -->
+    <div id="a">1a-<span style="color: #cc0000;"><b>wrapper</b></span>-minmax(1rem, 1fr)</div>
+    <div id="b">2b-minmax(auto, 70ch)-</div>
+    <div id="c">3c-minmax(1rem, 1fr);-</div>
+    <div id="a">4a-<br>&lt;br＞grid-gap: 0.5rem;この間隔</div>
+    <div id="b">5b-</div>
+    <div id="c">6c-</div>
+    <div id="a">7a-</div>
+    <div id="b">8b-</div>
+</main> 
+ 
+<!-- 
+<div class="full-bleed">
+<div id="a">a--full-bleed--</div>
+<div id="b">b----</div>
+<div id="c">c----</div>
+ </div>   -->
+ 
+<div class="parent">                                      <!--  ==========HTML  parent ==========   -->
+<div id="a">1a-<span style="color: #cc0000;"><b>parent</b></span>-に｛ display: flex; と flex-wrap: nowrap; }<br>プロパティはフレックスコンテナ内のアイテムの折り返し方法を指定する際に使用します。</div>
+<div id="b">2b-nowrap-折り返しなし（初期値）,wrap=折り返す</div>
+<div id="c">3c---</div>
+<div id="a">4a---</div>
+<div id="b">5b---</div>
+<div id="c">6c---</div>
+<div id="a">7a---</div>
+<div id="b">8b---</div>
+ </div>
+    
+ <div class="wrapper1">                                  <!--  ==========HTML  wrapper 1  ==========   -->
+<div id="a">a-<span style="color: #cc0000;"><b>wrapper 1 </b></span>-</div>
+<div id="b">b--</div>
+<div id="c">c--</div>
+ </div> 
+   
+ 
+  <h2>Some Heading</h2>
+  <p>Some content and stuff</p
+
+<p>下記の例では、グリッドコンテナを縦方向に 3rem, 3rem、横方向に 4rem, 4rem, 4rem, 4rem の領域に分けています。grid-row: 1 / 2 
+は縦方向のグリッド線の 1番目から 2番目、grid-column: 1 / 2 は、横方向のグリッド線の 1番目から 2番目の間の領域にグリッドアイテム
+を描画することを意味します。<br><span style="color: #cc0000;"><b>grid-container</b></span></p>
+<div class="grid-container">                             <!--  ==========HTML  grid-container  ==========   -->
+  <div class="itemA">A</div>
+  <div class="itemB">B</div>
+  <div class="itemC">C</div>
+  <div class="itemD">D</div>
+  <div class="itemE">E</div>
+  <div class="itemF">F</div>
+</div>
+
+
+  <div id="container"> <!-- コンテナ -->                      <!--  ==========HTML  container  ==========   -->
+    <div id="itemA">A-<br><span style="color: #cc0000;"><b>container</b></span></div> <!-- アイテム -->
+    <div id="itemB">B</div> <!-- アイテム -->
+    <div id="itemC">C</div> <!-- アイテム -->
+</div>
+<div id="container1">                                           <!--  ==========HTML  container 1  ==========   -->
+    <div id="itemA1">
+A-<b>container 1 </b><pre>-CSS-
+#container1 {
+ margin: 5px;                                      
+ display: grid;
+ grid-template-rows:146px 73px;
+ grid-template-columns:230px1fr;
+ grid-template-areas:
+      "areaA areaB"
+      "areaA areaC";}</pre>
+  </div>
+    <div id="itemB1">
+B<pre>-CSS-
+#itemB1 {
+    grid-area: areaB;
+    background: #8f8;}</pre>
+  </div>
+    <div id="itemC1">
+C<pre>-HTML-
+&lt;div id="itemC1"＞
+&lt;div＞
+</div>
+</div>
+
+
+
+
+
+          <!-- display: grid; -->
+<div>
+
+                                               <!--===========HTML　　o-grid　  id= a. b. c　　===============  -->
+
+<h2><pre> grid-template-columns: minmax(200px, 500px) 1fr 1fr;  と　grid-gap: 0.3rem;　のCSS<pre></h2>
+
+<div class="o-grid">
+
+<div id="a">a-<span style="color: #cc0000;"><b>o-grid</b></span> に<a href="https://coliss.com/articles/build-websites/operation/css/how-to-use-css-minmax.html">minmax()</a>をつかう！
+<br>1列目の幅はminmax(200px, 500px)で、これは最小値に200px、最大値に500pxを定義しています。
+</div>
+
+<div id="b">b--<a href="https://www.joshwcomeau.com/css/full-bleed/">Josh W Comeau</a></div>
+<div id="c">c--2列目と3列目の1frは、利用可能な残りのスペースを分配します。</div>
+
+</div>
+</div>
+<span style="color: #cc0000;"><b>classグループ&emsp;wrapper・parent・wrapper1 ・ grid-container ・ o-grid  ・ </b></span>
+idグループ&emsp; container  ・  container1
+<br><br>
+
+<div id="element"> 要　素　</div>
+<div>
+<!--<div style="float: right;">--> ↓　↓　↓
+<pre><code>
+HTML
+&lt;div class = "element">要素&lt;/div>
+CSS
+.element{
+  display: flex;                             　/*表示：フレクッス;*/
+  justify-content: center;                 /* コンテナ内全体の主軸方向（初期値では横方向）の揃え位置*/
+  align-items: center;                    /* コンテナ内全体の交差軸方向（初期値では縦方向）の揃え位置*/
+  width: <mark>clamp</mark>(200px, 50%, 1000px);    /*幅：クランプ（最小幅, 推奨幅, 最大幅）; */
+  padding: 1.5rem 1rem;                /* */
+  color: #fff;                         /*色 */
+  background: #468eef;                 /*背景 */
+  border-radius: 5px;                           /* */
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.13);  /* rgba( 赤, 緑, 青, 透明度 )*/
+  margin: 0 auto;                               /*上下０は不要？　左右自動 */
+}
+</code>
+</pre></div>
+</div>
+<div style="padding-top: 7em;"><code>&lt;html  body><br>&lt;h2>タイトル&lt;/h2></code>
+     <br><code>&lt;article>記事1&lt;/article></code>
+     <br><code>&lt;article>記事2&lt;/article></code>
+     <br><code>&lt;article>記事3&lt;/article></code>
+     <br><code>&lt;article>記事4&lt;/article></code>
+     <br><code>&lt;nav>ナビ&lt;/nav1></code>
+     <br><code>&lt;footer>フッター&lt;/footer1>&lt;/body＞</code>
+</div>
+tableが簡単かも
+<table>
+    <caption>果物の値段</caption>
+    <thead>
+        <tr><th>店名<th>りんご<th>もも
+    </thead>
+    <tbody>
+        <tr><th>A店<td>100円<td>300円
+        <tr><th>B店<td>110円<td>280円
+    </tbody>
+</table>
+
+</main>                                    <!--  ==============================HTMLメイン お　わ　り　=========================   -->
+
+<nav>
+ナビ&#127757;
+
+</nav>
+
+<side>
+サイド
+<div class="element">&thinsp;<a href="https://canape2020.stars.ne.jp/CSS/grid.html"><span style="font-size: 0.9em;color: white">スタートページ</span></a></div>
+ <div class = "element">１&thinsp;<a href="https://canape2020.stars.ne.jp/CSS/grid1.html"><span style="font-size: 0.9em;color: white">ページのコード</span></a></div>
+  <div class = "element">２<a href="https://canape2020.stars.ne.jp/CSS/grid2.html"><span style="font-size: 0.9em;color: white">参考サイト</span></a></div>
+
+  <div class = "element">３<a href="https://canape2020.stars.ne.jp/CSS/grid3.html"><span style="font-size: 0.9em;color: white">グリッドコンテナ</span></a></div>
+
+  <div class = "element">４<a href="https://canape2020.stars.ne.jp/CSS/grid4.html"><span style="font-size: 0.9em;color: white">参考例CSSコード</span></a></div>
+
+  <div class = "element">５<a href="https://canape2020.stars.ne.jp/CSS/font.html"><span style="font-size: 0.9em;color: white">CSSフォントと関数</span></a></div>
+</side>
+
+<footer>
+<nev><a href="https://canape2020.stars.ne.jp/CSS/grid2.html" target="grid2.html">Prev</a> &#8212; <a href="https://canape2020.stars.ne.jp/CSS/grid4.html" target="grid4.html">Next</a></nev>
+
+</footer>
+
+<ad>
+広告
+
+
+
+</ad> 
+
+</body>
+</html>
+ 
+ 
+ 
+ 

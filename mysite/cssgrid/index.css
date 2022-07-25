@@ -1,0 +1,89 @@
+ body {
+         width: 1000px;
+         display: grid;
+         margin: 0;
+         min-height: 60vh; /*ビューポート高さの 60% */
+         grid-template-rows: 80px 90px 1fr 80px;     /*上のｈ１ , 右中の広告 , メイン , フッター*/
+         grid-template-columns: 80px 1fr 300px;
+         grid-template-areas:
+        "title  title  title "
+        "nav    main   ad    "
+        "nav    main   side  "
+        "footer footer footer";
+       }
+      body > * {
+        margin: 3px;
+        padding: 10px;
+       }
+     h1 {
+         grid-area: title;
+         background: #faa;
+         border-radius: 30px 30px 0 0;
+     }
+     main {
+         grid-area: main;
+         background: #afa;
+     }
+     nav {
+         grid-area: nav;
+         background: #aaf;
+     }
+     #side {
+         grid-area: side;
+         background: #faf;
+     }
+     footer {
+         grid-area: footer;
+         background: #aaa;
+         font-size: 1.5em;
+         text-align: center;
+         border-radius: 0 0 30px 30px;
+     }
+     #ad {
+        grid-area: ad;
+        background: #888;
+     }
+ #element{                         /*- 以下は追加 -*/
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(200px, 50%, 1000px);
+  padding: 1.5rem 1rem;
+  color: #fff;
+  background: #468eef;
+  border-radius: 5px;
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.13);
+  margin: 0 auto;
+} 
+.element{
+  display: flex;                             　/*表示：フレクッス;*/
+  justify-content: center;                 /* コンテナ内全体の主軸方向（初期値では横方向）の揃え位置*/
+  align-items: center;                    /* コンテナ内全体の交差軸方向（初期値では縦方向）の揃え位置*/
+  width: clamp(250px, 50%, 500px);    /*幅：クランプ（最小幅, 推奨幅, 最大幅）; */
+  padding: 0rem 1rem;                /* */
+  color: #fff;                         /*色 */
+  background: #468eef;                 /*背景 */
+  border-radius: 5px;                           /* */
+  box-shadow: 0 3px 8px 0 rgba(0, 0, 0, 0.13);  /* rgba( 赤, 緑, 青, 透明度 )*/
+  margin: 1px auto;                               /*上下０は不要？　左右自動 */
+}
+ 
+     
+                   /*-----------------------------以下はページ内に追加こちら側優先している--------------------------*/
+
+ /*   
+薔薇マーク Welcome to Canape
+
+ 
+スタートページ
+１
+このページ構造のCSSコード
+２
+簡単ページ構造のCSSコード
+３
+グリッドコンテナ
+４
+参考例CSSコード
+５
+CSSのフォントサイズと関数
+　*/

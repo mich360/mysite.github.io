@@ -1,0 +1,105 @@
+<!DOCTYPE html><!--https://github.com/lightsound/html-css-class/tree/master/003_Sidebar-->
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">          <!-- ビューポート（viewport）とは、表示サイズのこと スマホ向け -->  
+        <title>Document</title>
+        <link rel="stylesheet" href="style.css" />
+       <script>
+		window.addEventListener('load', (event) => {
+
+			// ブラウザのウインドウサイズを取得する
+			var window_w = window.innerWidth;
+			var window_h = window.innerHeight;
+
+			console.log(window_w);
+			console.log(window_h);
+		});
+		
+	</script>
+<style>
+/*#grid {        /*CSS フレックスボックスレイアウト--   https://developer.mozilla.org/ja/docs/Web/CSS/CSS_Flexible_Box_Layout -参考サイト*/
+  display: grid;
+  height: 500px;
+  grid-template: repeat(3, 1fr) / repeat(3, 1fr);
+  gap: 60px 5px;
+}
+
+#grid > div {
+  border: 1px solid white;
+  background-color: ;
+}
+*/
+main {
+    width: 1000px;
+    margin: 0 auto;
+    }
+</style>
+
+    </head>
+    <body>
+     <!--burg-->
+        <input id="menu" type="checkbox" />
+        <label for="menu" class="open"><img src="https://masumo10.web.fc2.com/image/menuu.png" alt="メニューバー"><a class="btn_test" href="">&emsp;上のメニューで開く</a></label> <!--<b>&emsp;🍔</b>-->
+        <label for="menu" class="back" ></label>   
+      <aside style=" background-color:  #E0FFFF;">
+       <!--burg--> 
+        <label for="menu" class="close"><img src="https://masumo10.web.fc2.com/image/menuu.png" alt="メニューバー"><a class="btn_test" href="">上クリックで隠れる</a></label>       
+            <nav>
+                <ul>
+                    <li><a href="http://www.htmq.com/style/border.shtml ">borderプロパティ</a></li>
+                    <li><a href=" http://www.htmq.com/style/table-layout.shtml">table-layoutプロパティ</a></li>
+                    <li><b>以下はMDNの公式サイト</b></li>
+                    <li><a href=" https://developer.mozilla.org/ja/search?q=table+%E8%A6%81%E7%B4%A0 ">&lt;table＞: 表要素</a></li>
+                    <li><a href=" https://developer.mozilla.org/ja/docs/Web/CSS/border-collapse ">border-collapse プロパティ</a></li>
+                    <li><a href=" https://developer.mozilla.org/ja/docs/Web/HTML/Element/td ">&lt;td＞: 表データセル要素</a></li>
+                    <li><a href=" https://developer.mozilla.org/ja/docs/Web/CSS/border-spacing ">border-spacing プロパティ</a></li>
+                    <li><a href=" https://developer.mozilla.org/ja/docs/Web/CSS/table-layout ">table-layout プロパティ</a></li>
+                    <li>list</li>
+                    <li>list</li>
+                    <li>list</li>
+                </ul>
+            </nav>
+            <div>
+                side footer
+            </div>
+        </aside>
+        <main style=" width: 1000px; margin: 0 auto;"> 
+<!--    <div id="grid">
+    <div></div> 
+    <div></div>
+</div>
+ -->   
+ <!-- <div style="background: #CCFFFF;"></div>-->
+    
+        
+        
+       
+  <h3>HTMLの表組み</h3>
+      <div> <strong>&lt;table＞タグ内書き方</strong>
+          <ul>
+                <li><dt>&lt;table border="<small>ピクセル数</small>"＞</dt><dd>罫線の太さを指定できる<a href="http://www.htmq.com/style/border.shtml">borderについて</a></dd></li>
+                <li><dt>&lt;table border="<small>ピクセル数</small>"&nbsp;width="<small>数 % か px</small>"＞</dt><dd>表組の横幅を指定できる</dd></li>
+                <li><dt>&lt;table border="1" width="100%" style="table-layout: auto;"＞<br>&lt;table border="1" width="100%" style="table-layout: fixed;"＞</dt><dd><a href="http://www.htmq.com/style/table-layout.shtml">table-layoutプロパティは表の表示方法を指定</a></dd></li>
+                <li><dt>&lt;caption＞</dt><dd>表に専用の題名・説明をつけることができる</dd></li> 
+                <li><dt>&lt;tr＞</dt><dd>タグ横方向に行（ここからセルの表組）</dd></li> 
+                <li><dt>&lt;th＞</dt><dd>見出しの設定ができる&emsp;太字・中央</dd></li> 
+                <li><dt>&lt;／tr＞</dt><dd>タグで閉じたまでが一行の表となり</dd></li> 
+                <li><dt>&lt;th&nbsp;<small>or</small>&nbsp;td colspan="<small>右 セル数</small>"＞</dt><dd>横方向に隣り合うセルの内容が同じであれば、結合の一番左になるセルのtd要素またはth要素にcolspan属性</dd></li>
+                <li><dt>&lt;th&nbsp;<small>or</small>&nbsp;td rowspan="<small>下 セル数</small>"＞</dt><dd>縦方向に隣り合うセルの内容が同じであれば、結合の一番上になるセルのtd要素またはth要素にrowspan属性を指定します</dd></li>
+                <li><dt>&lt;td＞</dt><dd>タグで括る内容がセルとなる</dd>　
+                                   <dd>※&lt;td rowspan="2"＞ジャンル名&lt;/td＞タグでジャンル別行数の数値とジャンル名書くことができる
+                                   <br>※<th colspan="2">見出し名1・見出し名２</th>値が２だから見出し名も２つ<dd></li>
+                
+                <li><dt>&lt;table border="1" width="300" cellspacing="5"＞</dt><dd>cellspacing属性をつけることで、セルとセルの間隔を任意に指定できます。属性値は0からのピクセルで指定します。属性値を2に指定した場合、cellspacingを指定しないのと同じになります</dd></li> 
+                <li><dt>&lt;table width="100" height="100" border="2" cellpadding="6"></dt><dd>cellpadding属性をつけることセルの枠から文字までの距離（余白）</dd></li> 
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+                <li>-</li>
+          </ul>
+        </div>
+     </main>
+    </body>
+</html>
